@@ -1,0 +1,17 @@
+{%extends 'tempinherit.html'%}
+{% block title %} feedback{%endblock title%}
+{%block body%}<div class="mb-8 my-5">
+    <form class="row g-3 needs-validation px-5 my-5" novalidate action="feedback/" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" name="emaill" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label" >Enter your feedback here...</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="feedbacki"></textarea>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary " type="submit">Submit form</button>
+        </div>
+        {%endblock body%}
